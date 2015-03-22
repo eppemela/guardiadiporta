@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150322181300) do
+ActiveRecord::Schema.define(version: 20150322181640) do
 
   create_table "stations", force: true do |t|
     t.string   "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150322181300) do
     t.string   "mac_addr"
     t.integer  "tx_bytes"
     t.integer  "rx_bytes"
+    t.datetime "last_seen"
   end
 
 end
