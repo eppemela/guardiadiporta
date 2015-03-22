@@ -15,3 +15,17 @@ Migrating to AddMacAddressToStations (20150322181005)
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150322181005"]]
   [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUsageStatsToStations (20150322181300)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "stations" ADD "tx_bytes" BIGINT UNSIGNED[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "stations" ADD "rx_bytes" BIGINT UNSIGNED
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150322181300"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "stations" ("created_at", "mac_addr", "name", "rx_bytes", "tx_bytes", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-03-22 18:16:00.950801"], ["mac_addr", "32:00:12:7f:a2:e0"], ["name", "eppe"], ["rx_bytes", 12312131231], ["tx_bytes", 12312131231], ["updated_at", "2015-03-22 18:16:00.950801"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "stations" WHERE "stations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (2.7ms)[0m  commit transaction

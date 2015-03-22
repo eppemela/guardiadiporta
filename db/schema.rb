@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150322181005) do
+ActiveRecord::Schema.define(version: 20150322181300) do
 
   create_table "stations", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "mac_addr"
+    t.integer  "tx_bytes"
+    t.integer  "rx_bytes"
   end
 
 end
