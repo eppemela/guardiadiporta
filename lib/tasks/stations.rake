@@ -96,7 +96,7 @@ namespace :stations do
         attrib.lstrip!
       end
     end.each do |staz|
-      Station.create(:mac_addr => /([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])/.match(staz[0])[0] , :rx_bytes => /\d+/.match(staz[2])[0].to_i, :tx_bytes => /\d+/.match(staz[4])[0].to_i, :last_seen => Time.now.to_s )
+      Station.find_or_create(/([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])/.match(staz[0])[0] , /\d+/.match(staz[2])[0].to_i, /\d+/.match(staz[4])[0].to_i, Time.now.to_s )
     end
 
 
