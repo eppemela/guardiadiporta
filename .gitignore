@@ -32,3 +32,4 @@ custom_plan.rb
 config/database.yml
 .plumber-pane
 latest.dump
+stations_dump
