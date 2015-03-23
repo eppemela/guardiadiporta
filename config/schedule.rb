@@ -18,3 +18,8 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+#clients=`/sbin/iw dev wlan0 station dump | /bin/grep Station | /usr/bin/wc -l`
+every 1.minutes do
+  command "/sbin/iw dev wlan0 station dump"
+end
