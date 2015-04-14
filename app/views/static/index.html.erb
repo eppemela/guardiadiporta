@@ -1,2 +1,3 @@
-<h1>Numero di utenti nelle scorse 24h</h1>
-<%= column_chart Session.group_by_hour_of_day(:updated_at, range: 1.days.ago.midnight..Time.now).count %>
+<h1>Presenze nelle scorse 24h</h1>
+<!-- <%= column_chart Session.group_by_hour_of_day(:updated_at, range: 1.days.ago.midnight..Time.now).count %> -->
+<%= timeline @today_sessions %>

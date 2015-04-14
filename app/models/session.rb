@@ -21,4 +21,19 @@ class Session < ActiveRecord::Base
     end
   end
 
+  def self.today
+    today_sessions = []
+    all_sessions = Session.all
+    all_sessions.each do |sess|
+      if(sess.start.today?)
+        if( sess.station.name == nil)
+          today_sessions.push(["anonymous", sess.start.to_s, sess.end.to_s])
+        else
+          today_sessions.push([sess.station.name.to_s, sess.start.to_s, sess.end.to_s])
+        end
+      end
+    end
+    today_sessions
+  end
+
 end
