@@ -1,6 +1,6 @@
 # Guardia di Porta
 
-A simple rails api to monitor connected clients on a [dd-wrt](http://www.dd-wrt.com) based router
+A simple rails app to monitor connected clients on a [dd-wrt](http://www.dd-wrt.com) based router
 
 ###Components
 This monitoring app has two components:
