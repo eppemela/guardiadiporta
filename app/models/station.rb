@@ -3,7 +3,7 @@ class Station < ActiveRecord::Base
   scope :not_ignored, -> { where(ignore: false) }
   scope :present, -> { not_ignored.where("last_seen >= ?", 5.minutes.ago ) }
   scope :not_present, -> {not_ignored.where("last_seen < ?", 10.minutes.ago) }
-  
+
   has_many :sessions, dependent: :destroy
 
   def self.get(mac)

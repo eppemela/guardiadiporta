@@ -3,11 +3,15 @@ class Session < ActiveRecord::Base
 
   scope :open, -> { where(open: true) }
   scope :closed, -> { where(open: false) }
+  scope :opened_today, -> { where("start >= ?", Date.today).order(start: :asc) }
 
   def self.get(station_id)
     where(station_id: station_id, open: true)
   end
 
+  def opened_today?
+    start >= Date.today
+  end
 
   def self.find_or_create(station_id, start_time)
     attributes_for_creation = {
@@ -22,18 +26,12 @@ class Session < ActiveRecord::Base
   end
 
   def self.today
-    today_sessions = []
-    all_sessions = Session.all
-    all_sessions.each do |sess|
-      if(sess.start.today?)
-        if( sess.station.name == nil)
-          today_sessions.push(["anonymous", sess.start.to_s, sess.end.to_s])
-        else
-          today_sessions.push([sess.station.name.to_s, sess.start.to_s, sess.end.to_s])
-        end
-      end
+    all_sessions = []
+    opened_today.each do |s|
+      s.end.nil? ? end_time = Time.now : end_time = s.end
+      s.station.name.nil? ? all_sessions.push(["anonymous", s.start, end_time]) : all_sessions.push([s.station.name.to_s, s.start, end_time])
     end
-    today_sessions
+    all_sessions
   end
 
 end
