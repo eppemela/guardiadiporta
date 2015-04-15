@@ -28,8 +28,10 @@ class Session < ActiveRecord::Base
   def self.today
     all_sessions = []
     opened_today.each do |s|
-      s.end.nil? ? end_time = Time.now : end_time = s.end
-      s.station.name.nil? ? all_sessions.push(["anonymous", s.start, end_time]) : all_sessions.push([s.station.name.to_s, s.start, end_time])
+      unless s.station.ignore?
+        s.end.nil? ? end_time = Time.now : end_time = s.end
+        s.station.name.nil? ? all_sessions.push([s.station.mac_addr, s.start, end_time]) : all_sessions.push([s.station.name.to_s, s.start, end_time])
+      end
     end
     all_sessions
   end
