@@ -61,14 +61,29 @@ class StationsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_station
-      @station = Station.find(params[:id])
-    end
+  # GET /nowpresent
+  # GET /nowpresent.json
+  def nowpresent
+    @stations = Station.present
+    render json: @stations
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def station_params
-      params.require(:station).permit(:name, :mac_addr, :last_seen, :ignore)
-    end
+  # GET /anyone_here
+  # GET /anyone_here.json
+  def anyone_here?
+    @res = Station.anyone_here?
+    render json: @res
+  end
+
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_station
+    @station = Station.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def station_params
+    params.require(:station).permit(:name, :mac_addr, :last_seen, :ignore)
+  end
 end

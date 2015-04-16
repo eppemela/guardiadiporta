@@ -1,3 +1,2 @@
-<h1>Presenze nelle scorse 24h</h1>
-<!-- <%= column_chart Session.group_by_hour_of_day(:updated_at, range: 1.days.ago.midnight..Time.now).count %> -->
+<h1>Guardia di Porta</h1>
 <%= timeline [["Giornata",  Time.now.beginning_of_day, Time.now.end_of_day]] + @today_sessions, library: {height: "600"} %>
