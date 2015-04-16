@@ -36,3 +36,7 @@ and it will be written on the `stations_dump` file in the rails app.
 
 The **rake task** on the other hand gets runned every minute by [whenever](https://github.com/javan/whenever) gem, parses the *stations_dump* output file and updates the stations status in the
 database.
+
+
+##ToDo
+Implement a vertical timeline with the stations in and outs using [this](http://tympanus.net/codrops/2011/12/05/lateral-on-scroll-sliding-with-jquery/).

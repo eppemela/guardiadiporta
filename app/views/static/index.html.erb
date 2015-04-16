@@ -1,2 +1,4 @@
-<h1>Guardia di Porta</h1>
-<%= timeline [["Giornata",  Time.now.beginning_of_day, Time.now.end_of_day]] + @today_sessions, library: {height: "600"} %>
+<% content_for :header do -%>
+<% end -%>
+<% content_for :title, "Presenze registrate nelle ultime 24 ore" %>
+<%= timeline [[Date.today.to_formatted_s(:rfc822),  Time.now.beginning_of_day, Time.now.end_of_day]] + @today_sessions, library: {height: "600"} %>
