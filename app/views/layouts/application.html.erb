@@ -2,65 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author" content="Eppedema">
 
   <title>Guardia di Porta</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'dashboard', media: 'all' %>
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- Bootstrap core CSS -->
+  <%= stylesheet_link_tag    'application', media: 'all' %>
 
-  <%= csrf_meta_tags %>
+  <!--external css-->
   <%= yield(:header) if content_for? :header %>
+
+  <!-- Custom styles for this template -->
+  <%= stylesheet_link_tag    'style' %>
+  <%= stylesheet_link_tag    'style-responsive' %>
+
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Guardia di Porta</a>
+  <section id="container" >
+    <!-- **********************************************************************************************************************************************************
+    TOP BAR CONTENT & NOTIFICATIONS
+    *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+      <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-toggle="tooltip" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Dashboard", root_path %></li>
-          <li><%= link_to "Stations", stations_path %></li>
-          <li><%= link_to "Sessions", sessions_path %></li>
+      <!--logo start-->
+      <a href="index.html" class="logo"><b>GUARDIA DI PORTA</b></a>
+      <!--logo end-->
+
+      <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+          <li><a class="logout" href="login.html">Logout</a></li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </header>
+    <!--header end-->
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar">
-        <ul class="nav nav-sidebar">
-          <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Dashboard", root_path %></li>
-          <li class="<%= 'active' if current_page?(stations_path) %>"><%= link_to "Stations", stations_path %></li>
-          <li class="<%= 'active' if current_page?(sessions_path) %>"><%= link_to "Sessions", sessions_path %></li>
+    <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar"  class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+
+          <li class="mt">
+            <% current_page?(root_path) ? @classe = "active" : @classe = nil %>
+            <%= link_to(root_path , class: @classe) do %>
+            <i class="fa fa-dashboard"></i>
+            Dashboard
+            <% end %>
+          </li>
+
+          <li>
+            <% current_page?(stations_path) ? @classe = "active" : @classe = nil %>
+            <%= link_to(stations_path , class: @classe) do %>
+            <i class="fa fa-users"></i>
+            Users
+            <% end %>
+          </li>
+
+          <li>
+            <% current_page?(sessions_path) ? @classe = "active" : @classe = nil %>
+            <%= link_to(sessions_path , class: @classe) do %>
+            <i class="fa fa-database"></i>
+            Sessions
+            <% end %>
+          </li>
         </ul>
+        <!-- sidebar menu end-->
       </div>
-      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <h1 class="page-header"><%= yield(:title) %></h1>
+    </aside>
+    <!--sidebar end-->
 
-        <%= yield %>
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <h3><i class="fa fa-angle-right"></i><%= yield(:title) %></h3>
+        <div class="row mt">
+          <div class="col-lg-12">
+            <%= yield %>
+          </div>
+        </div>
 
+      </section> <!-- /wrapper -->
+    </section><!-- /MAIN CONTENT -->
+
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+      <div class="text-center">
+        <%= Time.now.year %> - Eppedema
+        <a href="blank.html#" class="go-top">
+          <i class="fa fa-angle-up"></i>
+        </a>
       </div>
-    </div>
-  </div>
+    </footer>
+    <!--footer end-->
+  </section>
+
+  <%= javascript_include_tag 'common-scripts' %>
+
 
 </body>
 </html>
