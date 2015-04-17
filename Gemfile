@@ -7,8 +7,11 @@ gem 'rails', '4.2.1'
 gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.4'
+
 gem 'sass-rails', '~> 5.0'
+
 gem 'autoprefixer-rails'
+
 gem 'font-awesome-sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -19,6 +22,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
 gem 'jquery-ui-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
@@ -33,6 +37,8 @@ gem 'awesome_print'
 gem 'groupdate'
 
 gem "chartkick"
+
+gem 'chart-js-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

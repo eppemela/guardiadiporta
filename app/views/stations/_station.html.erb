@@ -1,0 +1,33 @@
+<div class="col-lg-4 col-md-4 col-sm-4 mb">
+  <div class="product-panel-2 pn">
+    <% if (station.ignore?)  %>
+    <div class="badge badge-not">OFF</div>
+    <% else %>
+    <div class="badge badge-hot">ON</div>
+    <% end %>
+    <h1 class="mt">
+      <% if (station.name.nil?) %>
+        <i class="fa fa-question fa-3x" style="margin-top: 0.1em"></i>
+      <% else %>
+        <i class="fa fa-user fa-3x" style="margin-top: 0.1em"></i>
+      <% end %>
+    </h1>
+    <h5 class="mt"><strong><%= station.name.nil? ? station.mac_addr : station.name %></strong></h5>
+    <h6>Last seen: <%= time_ago_in_words(station.last_seen) %> ago</h6>
+    <%= link_to(station) do %>
+    <button type="button" class="btn btn-theme">
+      <i class="fa fa-eye"></i> Show
+    </button>
+    <% end %>
+    <%= link_to(edit_station_path(station)) do %>
+    <button type="button" class="btn btn-theme02">
+      <i class="fa fa-pencil-square-o"></i> Edit
+    </button>
+    <% end %>
+    <%= link_to(station, method: :delete, data: { confirm: 'Are you sure? The station and its sessions will be lost forever!' }) do %>
+    <button type="button" class="btn btn-theme04">
+      <i class="fa fa-trash-o"></i> Destroy
+    </button>
+    <% end %>
+  </div>
+</div>

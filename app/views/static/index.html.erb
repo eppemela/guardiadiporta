@@ -1,5 +1,57 @@
 <% content_for :header do -%>
 <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 <% end -%>
+
 <% content_for :title, "Presenze registrate nelle ultime 24 ore" %>
-<%= timeline [[Date.today.to_formatted_s(:rfc822),  Time.now.beginning_of_day, Time.now.end_of_day]] + @today_sessions, library: {height: "600"} %>
+
+
+
+<div class="showback">
+  <div>
+    <%= timeline [[Date.today.to_formatted_s(:rfc822),  Time.now.beginning_of_day, Time.now.end_of_day]] + @today_sessions, library: {height: "100%"} %>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-4 mb">
+  <div class="grey-panel pn donut-chart">
+    <div class="grey-header">
+      <h5>SERVER LOAD</h5>
+    </div>
+    <canvas id="serverstatus01" height="120" width="120" style="width: 120px; height: 120px;"></canvas>
+    <script>
+    var doughnutData = [
+      {
+        value: 70,
+        color:"#FF6B6B"
+      },
+      {
+        value : 30,
+        color : "#fdfdfd"
+      }
+    ];
+    var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
+    </script>
+    <div class="row">
+      <div class="col-sm-6 col-xs-6 goleft">
+        <p>Usage<br>Increase:</p>
+      </div>
+      <div class="col-sm-6 col-xs-6">
+        <h2>21%</h2>
+      </div>
+    </div>
+  </div><!-- --/grey-panel ---->
+</div>
+<div class="col-md-4 col-sm-4 mb">
+  <!-- REVENUE PANEL -->
+  <div class="green-panel pn">
+    <div class="green-header">
+      <h5>REVENUE</h5>
+    </div>
+    <div class="chart mt">
+      <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,464,655]">
+        <canvas width="426" height="75" style="display: inline-block; width: 426px; height: 75px; vertical-align: top;"></canvas>
+      </div>
+    </div>
+    <p class="mt"><b>$ 17,980</b><br>Month Income</p>
+  </div>
+</div>
