@@ -11,6 +11,7 @@
 !.keep
 *.DS_Store
 *.AppleDouble
+.AppleDouble/*
 *.swp
 .env
 bin/stubs
