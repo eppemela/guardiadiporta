@@ -40,6 +40,8 @@ gem "chartkick"
 
 gem 'chart-js-rails'
 
+gem "bootstrap-switch-rails"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
