@@ -17,3 +17,5 @@
 //= require_tree .
 //= require Chart
 //= require bootstrap-switch
+//=require timelineJS/embed
+//=require timelineJS/locale/it

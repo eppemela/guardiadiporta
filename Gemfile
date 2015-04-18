@@ -42,6 +42,8 @@ gem 'chart-js-rails'
 
 gem "bootstrap-switch-rails"
 
+gem 'timelineJS-rails', '~> 1.1.5'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
