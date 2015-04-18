@@ -10,6 +10,11 @@ class StationsController < ApplicationController
   # GET /stations/1
   # GET /stations/1.json
   def show
+    @station = Station.find(params[:id])
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @station }
+    end
   end
 
   # GET /stations/new

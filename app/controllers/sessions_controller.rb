@@ -61,7 +61,33 @@ class SessionsController < ApplicationController
     end
   end
 
-  private
+  def timeline
+    @sessions = Session.all
+    slides = []
+    @sessions.each do |s|
+      name = s.station.name.nil? ? s.station.mac_addr : s.station.name
+      endingDate = s.end.nil? ? Time.now : s.end
+      slides.push({
+        :startDate => s.start,
+        :endDate => endingDate,
+        :headline => name,
+        :text => "Rilevata presenza di: #{name} il #{DateTime.parse("#{s.start.to_s}").strftime('%a %b %d %Y at %H:%M:%S') }"
+        })
+      end
+
+      respond_to do |format|
+        msg = {
+          :headline => "Sessions TimeLine",
+          :type => "default",
+          :text => "All the sessions since the beginning of time...",
+          :startDate => Session.first.start,
+          :date => slides
+        }
+        format.json  { render :json => {:timeline => msg} }
+      end
+    end
+
+    private
     # Use callbacks to share common setup or constraints between actions.
     def set_session
       @session = Session.find(params[:id])
@@ -71,4 +97,4 @@ class SessionsController < ApplicationController
     def session_params
       params.require(:session).permit(:start, :end, :duration, :open, :station_id)
     end
-end
+  end
