@@ -2234,6 +2234,10 @@ label {
     background: #68dff0;
     color: #fff;
     padding: 10px 0;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    z-index: -1;
 }
 
 
@@ -2252,7 +2256,7 @@ label {
 }
 
 .site-min-height {
-    min-height: 900px;
+    min-height: 100vh;
 }
 
 .verde-scuro {
