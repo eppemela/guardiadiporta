@@ -10,6 +10,7 @@
 /tmp
 !.keep
 *.DS_Store
+*/.AppleDouble
 *.AppleDouble
 .AppleDouble/*
 *.swp
