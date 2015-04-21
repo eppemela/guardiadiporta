@@ -40,3 +40,6 @@ database.
 
 ##ToDo
 Implement a vertical timeline with the stations in and outs using [this](http://tympanus.net/codrops/2011/12/05/lateral-on-scroll-sliding-with-jquery/).
+
+##Styling
+The theme I used is this free bootstrap theme here: (Dashgum)[http://www.blacktie.co/demo/dashgumfree/general.html]
