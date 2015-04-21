@@ -1,0 +1,2661 @@
+@charset "UTF-8";
+/*
+Template Name: DASHGUM FREE - Bootstrap 3.2 Admin Theme
+Template Version: 1.0
+Author: Carlos Alvarez
+Website: http://blacktie.co
+Premium: http://www.gridgum.com
+*/
+/* Import fonts */
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+/* BASIC THEME CONFIGURATION */
+/* line 14, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+body {
+  color: #797979;
+  background: #f2f2f2;
+  font-family: 'Ruda', sans-serif;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size: 13px;
+}
+
+/* line 23, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul li {
+  list-style: none;
+}
+
+/* line 27, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+a, a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+/* line 31, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+::-moz-selection {
+  background: #68dff0;
+  color: #fff;
+}
+::selection {
+  background: #68dff0;
+  color: #fff;
+}
+
+/* line 36, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+::-moz-selection {
+  background: #68dff0;
+  color: #fff;
+}
+
+/* line 41, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Bootstrap Modifications */
+/* line 47, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.modal-header {
+  background: #68dff0;
+}
+
+/* line 51, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.modal-title {
+  color: white;
+}
+
+/* line 55, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-round {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+
+/* line 60, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.accordion-heading .accordion-toggle {
+  display: block;
+  cursor: pointer;
+  border-top: 1px solid #F5F5F5;
+  padding: 5px 0px;
+  line-height: 28.75px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  outline: none !important;
+  text-decoration: none;
+}
+
+/*Theme Backgrounds*/
+/* line 77, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.bg-theme {
+  background-color: #68dff0;
+}
+
+/* line 81, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.bg-theme02 {
+  background-color: #ac92ec;
+}
+
+/* line 85, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.bg-theme03 {
+  background-color: #48cfad;
+}
+
+/* line 89, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.bg-theme04 {
+  background-color: #ed5565;
+}
+
+/*Theme Buttons*/
+/* line 94, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-theme {
+  color: #fff;
+  background-color: #68dff0;
+  border-color: #48bcb4;
+}
+
+/* line 99, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active,
+.open .dropdown-toggle.btn-theme {
+  color: #fff;
+  background-color: #48bcb4;
+  border-color: #48bcb4;
+}
+
+/* line 109, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-theme02 {
+  color: #fff;
+  background-color: #ac92ec;
+  border-color: #967adc;
+}
+
+/* line 114, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-theme02:hover,
+.btn-theme02:focus,
+.btn-theme02:active,
+.btn-theme02.active,
+.open .dropdown-toggle.btn-theme02 {
+  color: #fff;
+  background-color: #967adc;
+  border-color: #967adc;
+}
+
+/* line 124, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-theme03 {
+  color: #fff;
+  background-color: #48cfad;
+  border-color: #37bc9b;
+}
+
+/* line 129, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-theme03:hover,
+.btn-theme03:focus,
+.btn-theme03:active,
+.btn-theme03.active,
+.open .dropdown-toggle.btn-theme03 {
+  color: #fff;
+  background-color: #37bc9b;
+  border-color: #37bc9b;
+}
+
+/* line 139, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-theme04 {
+  color: #fff;
+  background-color: #ed5565;
+  border-color: #da4453;
+}
+
+/* line 144, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-theme04:hover,
+.btn-theme04:focus,
+.btn-theme04:active,
+.btn-theme04.active,
+.open .dropdown-toggle.btn-theme04 {
+  color: #fff;
+  background-color: #da4453;
+  border-color: #da4453;
+}
+
+/* line 154, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-clear-g {
+  color: #48bcb4;
+  background: transparent;
+  border-color: #48bcb4;
+}
+
+/* line 160, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-clear-g:hover {
+  color: white;
+}
+
+/* line 164, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #797979;
+}
+
+/*Helpers*/
+/* line 175, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.centered {
+  text-align: center;
+}
+
+/* line 179, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.goleft {
+  text-align: left;
+}
+
+/* line 183, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.goright {
+  text-align: right;
+  padding-right: 2em;
+  padding-top: 1em;
+}
+
+/* line 189, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.mt {
+  margin-top: 25px;
+}
+
+/* line 193, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.mb {
+  margin-bottom: 25px;
+}
+
+/* line 197, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ml {
+  margin-left: 5px;
+}
+
+/* line 201, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.no-padding {
+  padding: 0 !important;
+}
+
+/* line 205, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.no-margin {
+  margin: 0 !important;
+}
+
+/*Exclusive Theme Colors Configuration*/
+/* line 211, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.label-theme {
+  background-color: #68dff0;
+}
+
+/* line 215, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.bg-theme {
+  background-color: #68dff0;
+}
+
+/* line 219, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.top-menu > li > .logout {
+  color: #f2f2f2;
+  font-size: 12px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: 1px solid #64c3c2 !important;
+  padding: 5px 15px;
+  margin-right: 15px;
+  background: #68dff0;
+  margin-top: 15px;
+}
+
+/*sidebar navigation*/
+/* line 234, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#sidebar {
+  width: 210px;
+  height: 100%;
+  position: fixed;
+  background: #424a5d;
+}
+
+/* line 241, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#sidebar h5 {
+  color: #f2f2f2;
+  font-weight: 700;
+}
+
+/* line 246, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#sidebar ul li {
+  position: relative;
+}
+
+/* line 250, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#sidebar .sub-menu > .sub li {
+  padding-left: 32px;
+}
+
+/* line 254, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#sidebar .sub-menu > .sub li:last-child {
+  padding-bottom: 10px;
+}
+
+/*LEFT NAVIGATION ICON*/
+/* line 259, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dcjq-icon {
+  height: 17px;
+  width: 17px;
+  display: inline-block;
+  background: url("../img/nav-expand.png") no-repeat top;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+/* line 271, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.active .dcjq-icon {
+  background: url("../img/nav-expand.png") no-repeat bottom;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+/*---*/
+/* line 279, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.nav-collapse.collapse {
+  display: inline;
+}
+
+/* line 283, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu, ul.sidebar-menu li ul.sub {
+  margin: -2px 0 0;
+  padding: 0;
+}
+
+/* line 288, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu {
+  margin-top: 75px;
+}
+
+/* line 292, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#sidebar > ul > li > ul.sub {
+  display: none;
+}
+
+/* line 296, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#sidebar > ul > li.active > ul.sub, #sidebar > ul > li > ul.sub > li > a {
+  display: block;
+}
+
+/* line 300, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li ul.sub li {
+  background: #424a5d;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 307, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li ul.sub li:last-child {
+  border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+}
+
+/* line 312, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li ul.sub li a {
+  font-size: 12px;
+  padding: 6px 0;
+  line-height: 35px;
+  height: 35px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #aeb2b7;
+}
+
+/* line 325, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li ul.sub li a:hover {
+  color: white;
+  background: transparent;
+}
+
+/* line 330, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li ul.sub li.active a {
+  color: #68dff0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* line 340, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li {
+  /*line-height: 20px !important;*/
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* line 347, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li.sub-menu {
+  line-height: 15px;
+}
+
+/* line 351, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li a span {
+  display: inline-block;
+}
+
+/* line 355, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li a {
+  color: #aeb2b7;
+  text-decoration: none;
+  display: block;
+  padding: 15px 0 15px 10px;
+  font-size: 12px;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 369, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+  background: #68dff0;
+  color: #fff;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 382, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li a i {
+  font-size: 15px;
+  padding-right: 6px;
+}
+
+/* line 387, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li a:hover i, ul.sidebar-menu li a:focus i {
+  color: #fff;
+}
+
+/* line 391, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.sidebar-menu li a.active i {
+  color: #fff;
+}
+
+/* line 396, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.mail-info, .mail-info:hover {
+  margin: -3px 6px 0 0;
+  font-size: 11px;
+}
+
+/* MAIN CONTENT CONFIGURATION */
+/* line 402, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#main-content {
+  margin-left: 210px;
+}
+
+/* line 406, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.header, .footer {
+  min-height: 60px;
+  padding: 0 15px;
+}
+
+/* line 411, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1002;
+}
+
+/* line 418, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.black-bg {
+  background: #ffd777;
+  border-bottom: 1px solid #c9aa5f;
+}
+
+/* line 423, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.wrapper {
+  display: inline-block;
+  margin-top: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-top: 0px;
+  width: 100%;
+}
+
+/* line 433, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+a.logo {
+  font-size: 20px;
+  color: #ffffff;
+  float: left;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+/* line 441, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+a.logo b {
+  font-weight: 900;
+}
+
+/* line 445, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+a.logo:hover, a.logo:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+/* line 450, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+a.logo span {
+  color: #68dff0;
+}
+
+/*notification*/
+/* line 456, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#top_menu .nav > li, ul.top-menu > li {
+  float: left;
+}
+
+/* line 460, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.notify-row {
+  float: left;
+  margin-top: 15px;
+  margin-left: 92px;
+}
+
+/* line 466, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.notify-row .notification span.label {
+  display: inline-block;
+  height: 18px;
+  width: 20px;
+  padding: 5px;
+}
+
+/* line 473, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.top-menu > li > a {
+  color: #666666;
+  font-size: 16px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: 1px solid #666666 !important;
+  padding: 2px 6px;
+  margin-right: 15px;
+}
+
+/* line 483, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
+  border: 1px solid #b6b6b6 !important;
+  background-color: transparent !important;
+  border-color: #b6b6b6 !important;
+  text-decoration: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #b6b6b6 !important;
+}
+
+/* line 493, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.notify-row .badge {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 100;
+}
+
+/* line 500, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended {
+  max-width: 300px !important;
+  min-width: 160px !important;
+  top: 42px;
+  width: 235px !important;
+  padding: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176) !important;
+  border: none !important;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari and Chrome */
+  /* line 514, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+  .dropdown-menu.extended {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.176) !important;
+  }
+}
+/* line 519, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended li p {
+  background-color: #F1F2F7;
+  color: #666666;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px 4px 0px 0px;
+  -webkit-border-radius: 4px 4px 0px 0px;
+}
+
+/* line 528, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended li p.green {
+  background-color: #68dff0;
+  color: #fff;
+}
+
+/* line 533, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended li p.yellow {
+  background-color: #fcb322;
+  color: #fff;
+}
+
+/* line 538, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended li a {
+  border-bottom: 1px solid #EBEBEB !important;
+  font-size: 12px;
+  list-style: none;
+}
+
+/* line 544, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended li a {
+  padding: 15px 10px !important;
+  width: 100%;
+  display: inline-block;
+}
+
+/* line 550, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended li a:hover {
+  background-color: #F7F8F9 !important;
+  color: #2E2E2E;
+}
+
+/* line 555, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.tasks-bar .task-info .desc {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+/* line 560, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.tasks-bar .task-info .percent {
+  display: inline-block;
+  float: right;
+  font-size: 13px;
+  font-weight: 600;
+  padding-left: 10px;
+  margin-top: -4px;
+}
+
+/* line 569, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended .progress {
+  margin-bottom: 0 !important;
+  height: 10px;
+}
+
+/* line 574, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.inbox li a .photo img {
+  border-radius: 2px 2px 2px 2px;
+  float: left;
+  height: 40px;
+  margin-right: 4px;
+  width: 40px;
+}
+
+/* line 582, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.inbox li a .subject {
+  display: block;
+}
+
+/* line 586, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.inbox li a .subject .from {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* line 591, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.inbox li a .subject .time {
+  font-size: 11px;
+  font-style: italic;
+  font-weight: bold;
+  position: absolute;
+  right: 5px;
+}
+
+/* line 599, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.inbox li a .message {
+  display: block !important;
+  font-size: 11px;
+}
+
+/* line 604, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.top-nav {
+  margin-top: 7px;
+}
+
+/* line 608, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.top-nav ul.top-menu > li .dropdown-menu.logout {
+  width: 268px !important;
+}
+
+/* line 613, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.top-nav li.dropdown .dropdown-menu {
+  float: right;
+  right: 0;
+  left: auto;
+}
+
+/* line 619, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended.logout > li {
+  float: left;
+  text-align: center;
+  width: 33.3%;
+}
+
+/* line 625, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended.logout > li:last-child {
+  float: left;
+  text-align: center;
+  width: 100%;
+  background: #a9d96c;
+  border-radius: 0 0 3px 3px;
+}
+
+/* line 633, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended.logout > li:last-child > a, .dropdown-menu.extended.logout > li:last-child > a:hover {
+  color: #fff;
+  border-bottom: none !important;
+  text-transform: uppercase;
+}
+
+/* line 639, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended.logout > li:last-child > a:hover > i {
+  color: #fff;
+}
+
+/* line 643, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended.logout > li > a {
+  color: #a4abbb;
+  border-bottom: none !important;
+}
+
+/* line 648, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.full-width .dropdown-menu.extended.logout > li > a:hover {
+  background: none !important;
+  color: #50c8ea !important;
+}
+
+/* line 653, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended.logout > li > a:hover {
+  background: none !important;
+}
+
+/* line 657, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended.logout > li > a:hover i {
+  color: #50c8ea;
+}
+
+/* line 661, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended.logout > li > a i {
+  font-size: 17px;
+}
+
+/* line 665, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.dropdown-menu.extended.logout > li > a > i {
+  display: block;
+}
+
+/* line 669, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.top-nav ul.top-menu > li > a {
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 6px;
+  background: none;
+  margin-right: 0;
+}
+
+/* line 677, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.top-nav ul.top-menu > li {
+  margin-left: 10px;
+}
+
+/* line 681, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.top-nav ul.top-menu > li > a:hover, .top-nav ul.top-menu > li > a:focus {
+  border: 1px solid #F1F2F7;
+  background: #F1F2F7;
+}
+
+/* line 687, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.top-nav .dropdown-menu.extended.logout {
+  top: 50px;
+}
+
+/* line 691, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.top-nav .nav .caret {
+  border-bottom-color: #A4AABA;
+  border-top-color: #A4AABA;
+}
+
+/* line 695, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.top-nav ul.top-menu > li > a:hover .caret {
+  border-bottom-color: #000;
+  border-top-color: #000;
+}
+
+/* line 700, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.log-arrow-up {
+  background: url("../img/arrow-up.png") no-repeat;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  right: 20px;
+  top: -10px;
+}
+
+/*----*/
+/* line 711, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.notify-arrow {
+  border-style: solid;
+  border-width: 0 9px 9px;
+  height: 0;
+  margin-top: 0;
+  opacity: 0;
+  position: absolute;
+  left: 7px;
+  top: -18px;
+  -webkit-transition: all 0.25s ease 0s;
+          transition: all 0.25s ease 0s;
+  width: 0;
+  z-index: 10;
+  margin-top: 10px;
+  opacity: 1;
+}
+
+/* line 727, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.notify-arrow-yellow {
+  border-color: transparent transparent #FCB322;
+  border-bottom-color: #FCB322 !important;
+  border-top-color: #FCB322 !important;
+}
+
+/* line 732, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.notify-arrow-green {
+  border-color: transparent transparent #68dff0;
+  border-bottom-color: #68dff0 !important;
+  border-top-color: #68dff0 !important;
+}
+
+/*--sidebar toggle---*/
+/* line 742, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.sidebar-toggle-box {
+  float: left;
+  padding-right: 15px;
+  margin-top: 20px;
+}
+
+/* line 748, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.sidebar-toggle-box .fa-bars {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+}
+
+/* line 755, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.sidebar-closed > #sidebar > ul {
+  display: none;
+}
+
+/* line 759, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.sidebar-closed #main-content {
+  margin-left: 0px;
+}
+
+/* line 763, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.sidebar-closed #sidebar {
+  margin-left: -180px;
+}
+
+/* Dash Side */
+/* line 770, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ds {
+  background: #ffffff;
+  padding-top: 20px;
+}
+
+/* line 775, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ds h4 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* line 780, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ds h3 {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 0 10px;
+  line-height: 60px;
+  height: 60px;
+  margin: 0;
+  background: #ff865c;
+  text-align: center;
+}
+
+/* line 791, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ds i {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* line 796, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ds .desc {
+  border-bottom: 1px solid #eaeaea;
+  display: inline-block;
+  padding: 15px 0;
+  width: 100%;
+}
+
+/* line 803, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ds .desc:hover {
+  background: #f2f2f2;
+}
+
+/* line 807, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ds .thumb {
+  width: 30px;
+  margin: 0 10px 0 20px;
+  display: block;
+  float: left;
+}
+
+/* line 814, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ds .details {
+  width: 170px;
+  float: left;
+}
+
+/* line 819, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ds > .desc p {
+  font-size: 11px;
+}
+
+/* line 823, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ds p > muted {
+  font-size: 9px;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #666666;
+}
+
+/* line 830, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ds a {
+  color: #68dff0;
+}
+
+/* LINE ICONS CONFIGURATION */
+/* line 836, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.mtbox {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+/* line 841, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.box1 {
+  padding: 15px;
+  text-align: center;
+  color: #989898;
+  border-bottom: 1px solid #989898;
+}
+
+/* line 848, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.box1 span {
+  font-size: 50px;
+}
+
+/* line 853, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.box1 h3 {
+  text-align: center;
+}
+
+/* line 857, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.box0:hover .box1 {
+  border-bottom: 1px solid #ffffff;
+}
+
+/* line 861, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.box0 p {
+  text-align: center;
+  font-size: 12px;
+  color: #f2f2f2;
+}
+
+/* line 867, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.box0:hover p {
+  color: #ff865c;
+}
+
+/* line 871, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.box0:hover {
+  background: #ffffff;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* MAIN CHART CONFIGURATION */
+/* line 877, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.main-chart {
+  padding-top: 20px;
+}
+
+/* line 884, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.border-head h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  padding-bottom: 5px;
+  font-weight: normal;
+  font-size: 18px;
+  display: inline-block;
+  width: 100%;
+  font-weight: 700;
+  color: #989898;
+}
+
+/* line 897, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.custom-bar-chart {
+  height: 290px;
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+  border-bottom: 1px solid #c9cdd7;
+}
+
+/* line 905, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.custom-bar-chart .bar {
+  height: 100%;
+  position: relative;
+  width: 6%;
+  margin: 0px 4%;
+  float: left;
+  text-align: center;
+  z-index: 10;
+}
+
+/* line 915, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.custom-bar-chart .bar .title {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 923, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.custom-bar-chart .bar .value {
+  position: absolute;
+  bottom: 0;
+  background: #ff865c;
+  color: #68dff0;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+/* line 941, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.custom-bar-chart .bar .value:hover {
+  background: #2f2f2f;
+  color: #fff;
+}
+
+/* line 946, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.y-axis {
+  color: #555555;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  font-size: 11px;
+}
+
+/* line 954, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.y-axis li {
+  border-top: 1px dashed #dbdce0;
+  display: block;
+  height: 58px;
+  width: 100%;
+}
+
+/* line 961, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.y-axis li:last-child {
+  border-top: none;
+}
+
+/* line 965, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.y-axis li span {
+  display: block;
+  margin: -10px 0 0 -60px;
+  padding: 0 10px;
+  width: 40px;
+}
+
+/*Donut Chart Main Page Conf*/
+/* line 974, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.donut-main {
+  display: block;
+  text-align: center;
+}
+
+/* line 979, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.donut-main h4 {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* *************************************************************************************
+PANELS CONFIGURATIONS
+*************************************************************************************** */
+/*Panel Size*/
+/* line 990, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.pn {
+  height: 250px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* line 995, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.pn:hover {
+  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*Grey Panel*/
+/* line 1002, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.grey-panel {
+  text-align: center;
+  background: #dfdfe1;
+}
+
+/* line 1006, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.grey-panel .grey-header {
+  background: #ccd1d9;
+  padding: 3px;
+  margin-bottom: 15px;
+}
+
+/* line 1011, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.grey-panel h5 {
+  font-weight: 200;
+  margin-top: 10px;
+}
+
+/* line 1015, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.grey-panel p {
+  margin-left: 5px;
+}
+
+/* Specific Conf for Donut Charts*/
+/* line 1019, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.donut-chart p {
+  margin-top: 5px;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+/* line 1024, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.donut-chart h2 {
+  font-weight: 900;
+  color: #FF6B6B;
+  font-size: 38px;
+}
+
+/* Dark Blue*/
+/* line 1032, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.darkblue-panel {
+  text-align: center;
+  background: #444c57;
+}
+
+/* line 1036, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.darkblue-panel .darkblue-header {
+  background: transparent;
+  padding: 3px;
+  margin-bottom: 15px;
+}
+
+/* line 1041, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.darkblue-panel h1 {
+  color: #f2f2f2;
+}
+
+/* line 1044, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.darkblue-panel h5 {
+  font-weight: 200;
+  margin-top: 10px;
+  color: white;
+}
+
+/* line 1049, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.darkblue-panel footer {
+  color: white;
+}
+
+/* line 1052, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.darkblue-panel footer h5 {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+/*Green Panel*/
+/* line 1059, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.green-panel {
+  text-align: center;
+  background: #68dff0;
+}
+
+/* line 1063, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.green-panel .green-header {
+  background: #43b1a9;
+  padding: 3px;
+  margin-bottom: 15px;
+}
+
+/* line 1068, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.green-panel h5 {
+  color: white;
+  font-weight: 200;
+  margin-top: 10px;
+}
+
+/* line 1073, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.green-panel h3 {
+  color: white;
+  font-weight: 100;
+}
+
+/* line 1077, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.green-panel p {
+  color: white;
+}
+
+/*White Panel */
+/* line 1082, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.white-panel {
+  text-align: center;
+  background: #ffffff;
+  color: #ccd1d9;
+}
+
+/* line 1088, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.white-panel p {
+  margin-top: 5px;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+/* line 1093, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.white-panel .white-header {
+  background: #f4f4f4;
+  padding: 3px;
+  margin-bottom: 15px;
+  color: #c6c6c6;
+}
+
+/* line 1099, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.white-panel .small {
+  font-size: 10px;
+  color: #ccd1d9;
+}
+
+/* line 1104, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.white-panel i {
+  color: #68dff0;
+  padding-right: 4px;
+  font-size: 14px;
+}
+
+/*STOCK CARD Panel*/
+/* line 1111, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.card {
+  background: white;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1em;
+  height: 250px;
+}
+
+/* line 1117, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.stock .stock-chart {
+  background: #00c5de;
+}
+
+/* line 1120, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.stock .stock-chart #chart {
+  height: 10.7em;
+  background: url(http://i.imgbox.com/abmuNQx2) center bottom no-repeat;
+}
+
+/* line 1124, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.stock .current-price {
+  background: #1d2122;
+  padding: 10px;
+}
+
+/* line 1128, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.stock .current-price .info abbr {
+  display: block;
+  color: #f8f8f8;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 0.18em;
+}
+
+/* line 1135, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.stock .current-price .changes {
+  text-align: right;
+}
+
+/* line 1138, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.stock .changes .up {
+  color: #4fd98b;
+}
+
+/* line 1141, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.stock .current-price .changes .value {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+/* line 1145, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.stock .summary {
+  color: #2f2f2f;
+  display: block;
+  background: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+}
+
+/* line 1152, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.stock .summary strong {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+/*Content Panel*/
+/* line 1158, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.content-panel {
+  background: #ffffff;
+  box-shadow: 0px 3px 2px #aab2bd;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+/* line 1164, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.content-panel h4 {
+  margin-left: 10px;
+}
+
+/*WEATHER PANELS*/
+/* Weather 1 */
+/* line 1171, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather {
+  background: url(../img/weather.jpg) no-repeat center top;
+  text-align: center;
+  background-position: center center;
+}
+
+/* line 1176, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather i {
+  color: white;
+  margin-top: 45px;
+}
+
+/* line 1180, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather h2 {
+  color: white;
+  font-weight: 900;
+}
+
+/* line 1184, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather h4 {
+  color: white;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/* Weather 2 */
+/* line 1191, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-2 {
+  background: #e9f0f4;
+}
+
+/* line 1194, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-2 .weather-2-header {
+  background: #54bae6;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 1199, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-2 .weather-2-header p {
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* line 1204, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-2 .weather-2-header p small {
+  font-size: 10px;
+}
+
+/* line 1207, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-2 .data {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #272b34;
+}
+
+/* line 1212, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-2 .data h5 {
+  margin-top: 0px;
+  font-weight: lighter;
+}
+
+/* line 1216, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-2 .data h1 {
+  margin-top: 2px;
+}
+
+/* Weather 3 */
+/* line 1221, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-3 {
+  background: #ffcf00;
+}
+
+/* line 1225, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-3 i {
+  color: white;
+  margin-top: 30px;
+  font-size: 70px;
+}
+
+/* line 1230, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-3 h1 {
+  margin-top: 10px;
+  color: white;
+  font-weight: 900;
+}
+
+/* line 1235, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-3 .info {
+  background: #f2f2f2;
+}
+
+/* line 1238, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-3 .info i {
+  font-size: 15px;
+  color: #c2c2c2;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+/* line 1244, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-3 .info h3 {
+  font-weight: 900;
+  margin-bottom: 0px;
+}
+
+/* line 1248, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.weather-3 .info p {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 16px;
+  color: #c2c2c2;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/*Twitter Panel*/
+/* line 1259, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.twitter-panel {
+  background: #4fc1e9;
+  text-align: center;
+}
+
+/* line 1263, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.twitter-panel i {
+  color: white;
+  margin-top: 40px;
+}
+
+/* line 1267, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.twitter-panel p {
+  color: #f5f5f5;
+  margin: 10px;
+}
+
+/* line 1271, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.twitter-panel .user {
+  color: white;
+  font-weight: 900;
+}
+
+/* Instagram Panel*/
+/* line 1278, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.instagram-panel {
+  background: url(../img/instagram.jpg) no-repeat center top;
+  text-align: center;
+  background-position: center center;
+}
+
+/* line 1283, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.instagram-panel i {
+  color: white;
+  margin-top: 35px;
+}
+
+/* line 1287, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.instagram-panel p {
+  margin: 5px;
+  color: white;
+}
+
+/* Product Panel */
+/* line 1293, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.product-panel {
+  background: #dadad2;
+  text-align: center;
+  padding-top: 50px;
+  height: 100%;
+}
+
+/* Product Panel 2*/
+/* line 1301, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.product-panel-2 {
+  background: #dadad2;
+  text-align: center;
+}
+
+/* line 1305, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.product-panel-2 .badge {
+  position: absolute;
+  top: 40px;
+  left: 35px;
+}
+
+/* line 1310, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.badge-not {
+  background: #ed5565;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  border-radius: 100%;
+}
+
+/* line 1321, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.badge-hot {
+  background: #55eddd;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  border-radius: 100%;
+}
+
+/* Soptify Panel */
+/* line 1334, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#spotify {
+  background: url(../img/lorde.jpg) no-repeat center top;
+  margin-top: -15px;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 220px;
+  width: 100%;
+  background-size: 100%;
+  background-size: cover;
+}
+
+/* line 1350, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#spotify .btn-clear-g {
+  top: 15%;
+  right: 10px;
+  position: absolute;
+  margin-top: 5px;
+}
+
+/* line 1356, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#spotify .sp-title {
+  bottom: 15%;
+  left: 25px;
+  position: absolute;
+  color: #efefef;
+}
+
+/* line 1362, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#spotify .sp-title h3 {
+  font-weight: 900;
+}
+
+/* line 1365, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#spotify .play {
+  bottom: 18%;
+  right: 25px;
+  position: absolute;
+  color: #efefef;
+  font-size: 20px;
+}
+
+/* line 1372, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.followers {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+/* BLOG PANEL */
+/* line 1378, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#blog-bg {
+  background: url(../img/blog-bg.jpg) no-repeat center top;
+  margin-top: -15px;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 150px;
+  width: 100%;
+  background-size: 100%;
+  background-size: cover;
+}
+
+/* line 1394, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#blog-bg .badge {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+}
+
+/* line 1399, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.badge-popular {
+  background: #3498db;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  border-radius: 100%;
+}
+
+/* line 1409, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.blog-title {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 100px;
+  padding: 6px;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  display: block;
+  width: 120px;
+}
+
+/* line 1419, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.blog-text {
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+/* Calendar Configuration */
+/* line 1427, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#calendar {
+  color: white;
+  padding: 0px !important;
+}
+
+/* line 1431, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.calendar-month-header {
+  background: #43b1a9;
+}
+
+/* TODO PANEL */
+/* line 1436, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.steps {
+  display: block;
+}
+
+/* line 1439, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.steps input[type=checkbox] {
+  display: none;
+}
+
+/* line 1442, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.steps input[type=submit] {
+  background: #f1783c;
+  border: none;
+  padding: 0px;
+  margin: 0 auto;
+  width: 100%;
+  height: 55px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: background 0.5s ease;
+          transition: background 0.5s ease;
+}
+
+/* line 1457, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.steps input[type=submit]:hover {
+  background: #8fde9c;
+}
+
+/* line 1460, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.steps label {
+  background: #393D40;
+  height: 65px;
+  line-height: 65px;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #44494e;
+  color: #889199;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-indent: 52px;
+  cursor: pointer;
+  -webkit-transition: all 0.7s ease;
+          transition: all 0.7s ease;
+  margin: 0px;
+}
+
+/* line 1477, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.steps label:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  margin: 26px 0px 0px 18px;
+  border-radius: 100%;
+  -webkit-transition: border 0.7s ease;
+          transition: border 0.7s ease;
+}
+
+/* line 1487, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.steps label:hover {
+  background: #2B2E30;
+  color: #46b7e5;
+}
+
+/* line 1491, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.steps label:hover:before {
+  border: 1px solid #46b7e5;
+}
+
+/* line 1494, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#op1:checked ~ label[for=op1]:before,
+#op2:checked ~ label[for=op2]:before,
+#op3:checked ~ label[for=op3]:before {
+  border: 2px solid #96c93c;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGFJREFUeNpinHLMhgEHKADia0xQThIQs6JJ9gPxZhYQAcS6QHwDiI8hSYJAC0gBPxDLAvFcIJ6JJJkDxFNBVtgBcQ8Qa6BLghgwN4A4a9ElQYAFSj8C4mwg3o8sCQIAAQYA78QTYqnPZuEAAAAASUVORK5CYII=") no-repeat center center;
+}
+
+/* PROFILE PANELS */
+/* Profile 01*/
+/* line 1503, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#profile-01 {
+  background: url(../img/profile-01.jpg) no-repeat center top;
+  margin-top: -15px;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 150px;
+  width: 100%;
+  background-size: 100%;
+  background-size: cover;
+}
+
+/* line 1519, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#profile-01 h3 {
+  color: white;
+  padding-top: 50px;
+  margin: 0px;
+  text-align: center;
+}
+
+/* line 1525, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#profile-01 h6 {
+  color: white;
+  text-align: center;
+  margin-bottom: 0px;
+  font-weight: 900;
+}
+
+/* line 1531, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.profile-01 {
+  background: #68dff0;
+  height: 50px;
+}
+
+/* line 1535, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.profile-01:hover {
+  background: #2f2f2f;
+  -webkit-transition: background-color 0.6s;
+  transition: background-color 0.6s;
+  cursor: pointer;
+}
+
+/* line 1543, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.profile-01 p {
+  color: white;
+  padding-top: 15px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* Profile 02*/
+/* line 1551, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#profile-02 {
+  background: url(../img/profile-02.jpg) no-repeat center top;
+  margin-top: -15px;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 200px;
+  width: 100%;
+  background-size: 100%;
+  background-size: cover;
+}
+
+/* line 1567, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#profile-02 .user {
+  padding-top: 40px;
+  text-align: center;
+}
+
+/* line 1571, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#profile-02 h4 {
+  color: white;
+  margin: 0px;
+  padding-top: 8px;
+}
+
+/* line 1576, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.pr2-social a {
+  color: #cdcdcd;
+}
+
+/* line 1579, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.pr2-social a:hover {
+  color: #68dff0;
+}
+
+/* line 1582, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.pr2-social i {
+  margin-top: 15px;
+  margin-right: 12px;
+  font-size: 20px;
+}
+
+/*spark line*/
+/* line 1590, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.chart {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 1595, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.chart .heading {
+  text-align: left;
+}
+
+/* line 1598, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.chart .heading span {
+  display: block;
+}
+
+/* line 1601, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel.green-chart .chart-tittle {
+  font-size: 16px;
+  padding: 15px;
+  display: inline-block;
+  font-weight: normal;
+  background: #99c262;
+  width: 100%;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* line 1611, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#barchart {
+  margin-bottom: -15px;
+  display: inline-block;
+}
+
+/* line 1615, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel.green-chart .chart-tittle .value {
+  float: right;
+  color: #c0f080;
+}
+
+/* line 1619, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel.green-chart {
+  background: #a9d96c;
+  color: #fff;
+}
+
+/* line 1623, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel.terques-chart {
+  background: transparent;
+  color: #797979;
+}
+
+/* line 1627, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel.terques-chart .chart-tittle .value {
+  float: right;
+  color: #fff;
+}
+
+/* line 1631, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel.terques-chart .chart-tittle .value a {
+  color: #2f2f2f;
+  font-size: 12px;
+}
+
+/* line 1635, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel.terques-chart .chart-tittle .value a:hover, .panel.terques-chart .chart-tittle .value a.active {
+  color: #68dff0;
+  font-size: 12px;
+}
+
+/* line 1639, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel.terques-chart .chart-tittle {
+  font-size: 16px;
+  padding: 15px;
+  display: inline-block;
+  font-weight: normal;
+  background: #39b7ac;
+  width: 100%;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* line 1649, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.inline-block {
+  display: inline-block;
+}
+
+/* showcase background */
+/* line 1654, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.showback {
+  background: #ffffff;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 3px 2px #aab2bd;
+}
+
+/* Calendar Events - Calendar.html*/
+/* line 1664, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.external-event {
+  cursor: move;
+  display: inline-block !important;
+  margin-bottom: 7px !important;
+  margin-right: 7px !important;
+  padding: 10px;
+}
+
+/* line 1672, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.drop-after {
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid #ccc;
+}
+
+/* line 1678, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.fc-state-default, .fc-state-default .fc-button-inner {
+  background: #f2f2f2;
+}
+
+/* line 1682, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.fc-state-active .fc-button-inner {
+  background: #FFFFFF;
+}
+
+/* Gallery Configuration */
+/* line 1687, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.photo-wrapper {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-color: #68dff0;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+
+/* line 1697, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.project .overlay {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+/* line 1710, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.project:hover .photo-wrapper {
+  background-color: #68dff0;
+  background-image: url(../img/zoom.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+}
+
+/* line 1721, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.project:hover .photo {
+  opacity: 10;
+  filter: alpha(opacity=4000);
+  opacity: 0.1;
+  filter: alpha(opacity=40);
+}
+
+/* line 1727, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.project:hover .overlay {
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* EZ Checklist */
+/* line 1737, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ez-checkbox {
+  margin-right: 5px;
+}
+
+/* line 1741, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ez-checkbox, .ez-radio {
+  height: 20px;
+  width: 20px;
+}
+
+/* line 1746, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.brand-highlight {
+  background: #fffbcc !important;
+}
+
+/* FORMS CONFIGURATION */
+/* line 1752, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.form-panel {
+  background: #ffffff;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0px 3px 2px #aab2bd;
+  text-align: left;
+}
+
+/* line 1760, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+label {
+  font-weight: 400;
+}
+
+/* line 1764, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.form-horizontal.style-form .form-group {
+  border-bottom: 1px solid #eff2f7;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+/* line 1770, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.round-form {
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+}
+
+@media (min-width: 768px) {
+  /* line 1776, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+  .form-horizontal .control-label {
+    text-align: left;
+  }
+}
+/* line 1781, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#focusedInput {
+  border: 1px solid #ed5565;
+  box-shadow: none;
+}
+
+/* line 1786, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.add-on {
+  float: right;
+  margin-top: -37px;
+  padding: 3px;
+  text-align: center;
+}
+
+/* line 1793, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.add-on .btn {
+  height: 34px;
+}
+
+/* TOGGLE CONFIGURATION */
+/* line 1798, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.231;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 80px;
+  -webkit-mask: url("/assets/mask-88fd749aa26db8bd94d488a9799e8fb99d2e11daf3fea91c238b4fb9efad4826.png") 0 0 no-repeat;
+  mask: url("/assets/mask-88fd749aa26db8bd94d488a9799e8fb99d2e11daf3fea91c238b4fb9efad4826.png") 0 0 no-repeat;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* line 1816, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch.deactivate {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: default !important;
+  vertical-align: middle;
+}
+
+/* line 1822, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch.deactivate label,
+.has-switch.deactivate span {
+  cursor: default !important;
+}
+
+/* line 1826, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch > div {
+  width: 162%;
+  position: relative;
+  top: 0;
+}
+
+/* line 1831, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch > div.switch-animate {
+  -webkit-transition: left 0.25s ease-out;
+  transition: left 0.25s ease-out;
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 1838, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch > div.switch-off {
+  left: -63%;
+}
+
+/* line 1841, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch > div.switch-off label {
+  background-color: #7f8c9a;
+  border-color: #bdc3c7;
+  box-shadow: -1px 0 0 rgba(255, 255, 255, 0.5);
+}
+
+/* line 1848, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch > div.switch-on {
+  left: 0%;
+}
+
+/* line 1851, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch > div.switch-on label {
+  background-color: #41cac0;
+}
+
+/* line 1854, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch input[type=checkbox] {
+  display: none;
+}
+
+/* line 1857, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch span {
+  cursor: pointer;
+  font-size: 14.994px;
+  font-weight: 700;
+  float: left;
+  height: 29px;
+  line-height: 19px;
+  margin: 0;
+  padding-bottom: 6px;
+  padding-top: 5px;
+  position: relative;
+  text-align: center;
+  width: 50%;
+  z-index: 1;
+  box-sizing: border-box;
+  -webkit-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 1880, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch span.switch-left {
+  border-radius: 30px 0 0 30px;
+  background-color: #2A3542;
+  color: #41cac0;
+  border-left: 1px solid transparent;
+}
+
+/* line 1886, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch span.switch-right {
+  border-radius: 0 30px 30px 0;
+  background-color: #bdc3c7;
+  color: #ffffff;
+  text-indent: 7px;
+}
+
+/* line 1892, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch span.switch-right [class*="fui-"] {
+  text-indent: 0;
+}
+
+/* line 1895, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.has-switch label {
+  border: 4px solid #2A3542;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  float: left;
+  height: 29px;
+  margin: 0 -21px 0 -14px;
+  padding: 0;
+  position: relative;
+  vertical-align: middle;
+  width: 29px;
+  z-index: 100;
+  -webkit-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 1913, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.switch-square {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -webkit-mask: url("../img/mask.png") 0 0 no-repeat;
+  mask: url("../img/mask.png") 0 0 no-repeat;
+}
+
+/* line 1919, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.switch-square > div.switch-off label {
+  border-color: #7f8c9a;
+  border-radius: 6px 0 0 6px;
+}
+
+/* line 1923, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.switch-square span.switch-left {
+  border-radius: 6px 0 0 6px;
+}
+
+/* line 1926, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.switch-square span.switch-left [class*="fui-"] {
+  text-indent: -10px;
+}
+
+/* line 1929, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.switch-square span.switch-right {
+  border-radius: 0 6px 6px 0;
+}
+
+/* line 1932, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.switch-square span.switch-right [class*="fui-"] {
+  text-indent: 5px;
+}
+
+/* line 1935, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.switch-square label {
+  border-radius: 0 6px 6px 0;
+  border-color: #41cac0;
+}
+
+/*LOGIN CONFIGURATION PAGE*/
+/* line 1943, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.form-login {
+  max-width: 330px;
+  margin: 100px auto 0;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+/* line 1951, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.form-login h2.form-login-heading {
+  margin: 0;
+  padding: 25px 20px;
+  text-align: center;
+  background: #68dff0;
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* line 1963, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.login-wrap {
+  padding: 20px;
+}
+
+/* line 1966, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.login-wrap .registration {
+  text-align: center;
+}
+
+/* line 1969, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.login-social-link {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+/*LOCK SCREEN CONF*/
+/* line 1977, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#showtime {
+  width: 100%;
+  color: #fff;
+  font-size: 90px;
+  margin-bottom: 30px;
+  margin-top: 250px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* line 1988, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.lock-screen {
+  text-align: center;
+}
+
+/* line 1992, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.lock-screen a {
+  color: white;
+}
+
+/* line 1996, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.lock-screen a:hover {
+  color: #48cfad;
+}
+
+/* line 2000, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.lock-screen i {
+  font-size: 60px;
+}
+
+/* line 2004, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.lock-screen .modal-content {
+  position: relative;
+  background-color: #f2f2f2;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+/* line 2014, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-facebook {
+  color: #fff;
+  background-color: #5193ea;
+  border-color: #2775e2;
+}
+
+/* line 2019, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  color: #fff;
+  background-color: #2775e2;
+  border-color: #2775e2;
+}
+
+/* line 2029, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-twitter {
+  color: #fff;
+  background-color: #44ccfe;
+  border-color: #2bb4e8;
+}
+
+/* line 2034, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  color: #fff;
+  background-color: #2bb4e8;
+  border-color: #2bb4e8;
+}
+
+/*badge*/
+/* line 2046, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.badge.bg-primary {
+  background: #8075c4;
+}
+
+/* line 2050, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.badge.bg-success {
+  background: #a9d86e;
+}
+
+/* line 2054, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.badge.bg-warning {
+  background: #FCB322;
+}
+
+/* line 2058, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.badge.bg-important {
+  background: #ff6c60;
+}
+
+/* line 2062, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.badge.bg-info {
+  background: #41cac0;
+}
+
+/* line 2066, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.badge.bg-inverse {
+  background: #2A3542;
+}
+
+/*easy pie chart*/
+/* line 2072, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.easy-pie-chart {
+  display: inline-block;
+  padding: 30px 0;
+}
+
+/* line 2077, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.chart-info, .chart-info .increase, .chart-info .decrease {
+  display: inline-block;
+}
+
+/* line 2081, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.chart-info {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+/* line 2086, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.chart-position {
+  margin-top: 70px;
+}
+
+/* line 2090, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.chart-info span {
+  margin: 0 3px;
+}
+
+/* line 2094, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.chart-info .increase {
+  background: #ff6c60;
+  width: 10px;
+  height: 10px;
+}
+
+/* line 2100, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.chart-info .decrease {
+  background: #f2f2f2;
+  width: 10px;
+  height: 10px;
+}
+
+/* line 2106, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel-footer.revenue-foot {
+  background-color: #e6e7ec;
+  border-radius: 0px 0px 4px 4px;
+  border: none;
+  padding: 0;
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari and Chrome */
+  /* line 2118, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+  .panel-footer.revenue-foot {
+    margin-bottom: -4px;
+  }
+}
+/* line 2124, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel-footer.revenue-foot ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/* line 2131, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel-footer.revenue-foot ul li {
+  float: left;
+  width: 33.33%;
+}
+
+/* line 2136, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel-footer.revenue-foot ul li.first a:hover, .panel-footer.revenue-foot ul li.first a {
+  border-radius: 0px 0px 0px 4px;
+}
+
+/* line 2141, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel-footer.revenue-foot ul li.last a:hover, .panel-footer.revenue-foot ul li.last a {
+  border-radius: 0px 0px 4px 0px;
+  border-right: none;
+}
+
+/* line 2148, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel-footer.revenue-foot ul li a {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 15px;
+  text-align: center;
+  border-right: 1px solid #d5d8df;
+  color: #797979;
+}
+
+/* line 2157, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel-footer.revenue-foot ul li a:hover, .panel-footer.revenue-foot ul li.active a {
+  background: #fff;
+  position: relative;
+}
+
+/* line 2162, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel-footer.revenue-foot ul li a i {
+  color: #c6cad5;
+  display: block;
+  font-size: 16px;
+}
+
+/* line 2167, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.panel-footer.revenue-foot ul li a:hover i, .panel-footer.revenue-foot ul li.active a i {
+  color: #ff6c60;
+  display: block;
+  font-size: 16px;
+}
+
+/*flot chart*/
+/* line 2175, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.flot-chart .chart, .flot-chart .pie, .flot-chart .bars {
+  height: 300px;
+}
+
+/*todolist*/
+/* line 2180, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#sortable {
+  list-style-type: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 2186, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#sortable li {
+  padding-left: 3em;
+  font-size: 12px;
+}
+
+/* line 2190, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#sortable li i {
+  position: absolute;
+  left: 6px;
+  padding: 4px 10px 0 10px;
+  cursor: pointer;
+}
+
+/* line 2197, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+#sortable li input[type=checkbox] {
+  margin-top: 0;
+}
+
+/* line 2201, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ui-sortable > li {
+  padding: 15px 0 15px 35px !important;
+  position: relative;
+  background: #f5f6f8;
+  margin-bottom: 2px;
+  border-bottom: none !important;
+}
+
+/* line 2209, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ui-sortable li.list-primary {
+  border-left: 3px solid #41CAC0;
+}
+
+/* line 2213, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ui-sortable li.list-success {
+  border-left: 3px solid #78CD51;
+}
+
+/* line 2217, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ui-sortable li.list-danger {
+  border-left: 3px solid #FF6C60;
+}
+
+/* line 2221, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ui-sortable li.list-warning {
+  border-left: 3px solid #F1C500;
+}
+
+/* line 2225, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ui-sortable li.list-info {
+  border-left: 3px solid #58C9F3;
+}
+
+/* line 2229, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.ui-sortable li.list-inverse {
+  border-left: 3px solid #BEC3C7;
+}
+
+/*footer*/
+/* line 2234, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.site-footer {
+  background: #68dff0;
+  color: #fff;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  z-index: -1;
+}
+
+/* line 2245, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.go-top {
+  margin-right: 1%;
+  float: right;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+/* line 2255, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.go-top i {
+  color: #2A3542;
+}
+
+/* line 2259, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.site-min-height {
+  min-height: 100vh;
+}
+
+/* line 2263, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.verde-scuro {
+  color: #215854;
+}
+
+/* line 2267, /home/pi/guardiadiporta/app/assets/stylesheets/style.scss */
+.datetime-select  {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
