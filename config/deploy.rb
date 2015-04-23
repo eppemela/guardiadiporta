@@ -45,19 +45,12 @@ namespace :deploy do
     run "#{ sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
   end
 
-  # NOTE: I don't use this anymore, but this is how I used to do it.
-  # desc "Precompile assets after deploy"
-  # task :precompile_assets do
-  #   run <<-CMD
-  #     cd #{ current_path } &&
-  #     #{ sudo } bundle exec rake assets:precompile RAILS_ENV=#{ rails_env }
-  #   CMD
-  # end
-
-  desc "Restart applicaiton"
-  task :restart do
-    run "#{ try_sudo } touch #{ File.join(current_path, 'tmp', 'restart.txt') }"
-  end
+  desc 'Restart application'
+   task :restart do
+     on roles(:app), in: :sequence, wait: 5 do
+       execute 'sudo /etc/init.d/nginx restart'
+     end
+   end
 end
 
 after "deploy", "deploy:symlink_config_files"
