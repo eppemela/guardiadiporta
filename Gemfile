@@ -58,7 +58,13 @@ group :development, :test do
   gem 'byebug'
 
   # Use Capistrano for deployment
-  gem 'capistrano'
+  # gem 'capistrano', '~> 3.4.0'
+  # gem 'rvm1-capistrano3', require: false
+  # gem 'capistrano-passenger'
+  gem 'capistrano-rails', '~> 1.1.1'
+  # gem 'capistrano-bundler', '~> 1.1.2'
+  #gem 'capistrano-rvm'
+  #gem 'capistrano-rails'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   #gem 'web-console', '2.0.0.beta3'

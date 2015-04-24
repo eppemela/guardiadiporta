@@ -1,5 +1,5 @@
-set :application, "Guardia di Porta"
-set :repository,  "git@github.com:eppemela/guardiadiporta.git"
+set :application, "guardiadiporta"
+set :repo_url,  "git@github.com:eppemela/guardiadiporta.git"
 set :deploy_to, "/home/pi/guardiadiporta/public"
 set :scm, :git
 set :branch, "master"
@@ -10,8 +10,8 @@ set :rails_env, "production"
 set :deploy_via, :copy
 set :ssh_options, { :forward_agent => true }
 set :keep_releases, 5
-default_run_options[:pty] = true
-server "192.168.2.20", :app, :web, :db, :primary => true
+set :rvm_ruby_version, '2.1.1'
+#default_run_options[:pty] = true
 
 #set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -40,10 +40,10 @@ namespace :deploy do
   task :start do ; end
   task :stop do ; end
 
-  desc "Symlink shared config files"
-  task :symlink_config_files do
-    run "#{ sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
-  end
+  # desc "Symlink shared config files"
+  # task :symlink_config_files do
+  #   run "#{ sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+  # end
 
   desc 'Restart application'
    task :restart do
