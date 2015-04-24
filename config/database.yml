@@ -19,7 +19,9 @@ development:
   adapter: mysql2
   encoding: utf8
   pool: 5
-  database: guardiadiporta-dev
+  database: guardiadiporta
+  username: gdpuser
+  password: guardiadiportadatabasepwd123qwe
   shost: localhost
 
 
