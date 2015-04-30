@@ -18,7 +18,7 @@
 bin/stubs
 coverage/*
 log/*
-public/system
+public/*
 rerun.txt
 tags
 tmp/*
