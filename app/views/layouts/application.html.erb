@@ -34,7 +34,10 @@
         <div class="fa fa-bars tooltips" data-toggle="tooltip" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
       <!--logo start-->
-      <a href="index.html" class="logo"><b>GUARDIA DI PORTA</b></a>
+      <%= link_to root_url, class: "logo" do %>
+        GUARDIA DI PORTA &nbsp;
+        <i class="fa fa-user-secret" style="color: #797979;"></i>
+      <% end %>
       <!--logo end-->
 
     </header>
