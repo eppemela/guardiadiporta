@@ -62,6 +62,7 @@ group :development, :test do
   # gem 'rvm1-capistrano3', require: false
   # gem 'capistrano-passenger'
   gem 'capistrano-rails', '~> 1.1.1'
+  gem 'capistrano-bundler', '~> 1.1.2'
   # gem 'capistrano-bundler', '~> 1.1.2'
   #gem 'capistrano-rvm'
   #gem 'capistrano-rails'
