@@ -1,9 +1,94 @@
 <% content_for :header do -%>
 <% end -%>
 
-<% content_for :title, "Guardia di Porta Dashboard" %>
+<% content_for :title, "Dashboard" %>
+
+<div class="col-lg-9">
+  <div class="col-md-3 mb">
+    <div class="white-panel pn">
+      <div class="white-header">
+        <h5>TOP USER</h5>
+      </div>
+      <p><img src="assets/img/ui-zac.jpg" class="img-circle" width="80"></p>
+      <p><b>Zac Snider</b></p>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="small mt">MEMBER SINCE</p>
+          <p>2012</p>
+        </div>
+        <div class="col-md-6">
+          <p class="small mt">TOTAL SPEND</p>
+          <p>$ 47,60</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb">
+    <div class="white-panel pn">
+      <div class="white-header">
+        <h5>TOP USER</h5>
+      </div>
+      <p><img src="assets/img/ui-zac.jpg" class="img-circle" width="80"></p>
+      <p><b>Zac Snider</b></p>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="small mt">MEMBER SINCE</p>
+          <p>2012</p>
+        </div>
+        <div class="col-md-6">
+          <p class="small mt">TOTAL SPEND</p>
+          <p>$ 47,60</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb">
+    <div class="white-panel pn">
+      <div class="white-header">
+        <h5>TOP USER</h5>
+      </div>
+      <p><img src="assets/img/ui-zac.jpg" class="img-circle" width="80"></p>
+      <p><b>Zac Snider</b></p>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="small mt">MEMBER SINCE</p>
+          <p>2012</p>
+        </div>
+        <div class="col-md-6">
+          <p class="small mt">TOTAL SPEND</p>
+          <p>$ 47,60</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb">
+    <div class="white-panel pn">
+      <div class="white-header">
+        <h5>TOP USER</h5>
+      </div>
+      <p><img src="assets/img/ui-zac.jpg" class="img-circle" width="80"></p>
+      <p><b>Zac Snider</b></p>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="small mt">MEMBER SINCE</p>
+          <p>2012</p>
+        </div>
+        <div class="col-md-6">
+          <p class="small mt">TOTAL SPEND</p>
+          <p>$ 47,60</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
+</div>
+
+
+<% unless @present_stations.empty? %>
 <div class="col-lg-3 ds">
   <h3>Utenti attualmente presenti</h3>
   <% @present_stations.each do |station| %>
@@ -20,3 +105,4 @@
   </div>
   <% end %>
 </div>
+<% end %>
