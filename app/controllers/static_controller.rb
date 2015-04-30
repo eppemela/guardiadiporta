@@ -1,8 +1,11 @@
 class StaticController < ApplicationController
 
   def index
-    @today_sessions = Session.today
     @present_stations = Station.present
+  end
+
+  def today
+    @today_sessions = Session.today
   end
 
 end

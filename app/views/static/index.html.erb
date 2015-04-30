@@ -1,16 +1,8 @@
 <% content_for :header do -%>
-<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 <% end -%>
 
-<% content_for :title, "Presenze registrate nelle ultime 24 ore" %>
+<% content_for :title, "Guardia di Porta Dashboard" %>
 
-
-
-<div class="showback">
-  <div>
-    <%= timeline [[Date.today.to_formatted_s(:rfc822),  Time.now.beginning_of_day, Time.now.end_of_day]] + @today_sessions, library: {height: "100%"} %>
-  </div>
-</div>
 
 <div class="col-lg-3 ds">
   <h3>Utenti attualmente presenti</h3>

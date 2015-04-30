@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'nowpresent' => 'stations#nowpresent'
   get 'anyone_here' => 'stations#anyone_here?'
   get 'timeline' => 'sessions#timeline'
+  get 'today' => 'static#today'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

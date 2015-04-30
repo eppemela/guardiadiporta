@@ -37,11 +37,6 @@
       <a href="index.html" class="logo"><b>GUARDIA DI PORTA</b></a>
       <!--logo end-->
 
-      <div class="top-menu">
-        <ul class="nav pull-right top-menu">
-          <li><a class="logout" href="#">Logout</a></li>
-        </ul>
-      </div>
     </header>
     <!--header end-->
 
@@ -63,10 +58,10 @@
           </li>
 
           <li>
-            <% current_page?(stations_path) ? @classe = "active" : @classe = nil %>
-            <%= link_to(stations_path , class: @classe) do %>
-            <i class="fa fa-users"></i>
-            Users
+            <% current_page?(today_path) ? @classe = "active" : @classe = nil %>
+            <%= link_to(today_path , class: @classe) do %>
+            <i class="fa fa-clock-o"></i>
+            Today
             <% end %>
           </li>
 
@@ -74,9 +69,18 @@
             <% current_page?(sessions_path) ? @classe = "active" : @classe = nil %>
             <%= link_to(sessions_path , class: @classe) do %>
             <i class="fa fa-database"></i>
-            Sessions
+            Timeline
             <% end %>
           </li>
+
+          <li>
+            <% current_page?(stations_path) ? @classe = "active" : @classe = nil %>
+            <%= link_to(stations_path , class: @classe) do %>
+            <i class="fa fa-users"></i>
+            Users
+            <% end %>
+          </li>
+
         </ul>
         <!-- sidebar menu end-->
       </div>
