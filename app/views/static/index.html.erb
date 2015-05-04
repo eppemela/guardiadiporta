@@ -11,7 +11,15 @@
       <p><%= link_to(station.name || station.mac_addr, station, class: "azzurro") %><br>
         <%= time_ago_in_words(station.last_seen) %> ago
       </p>
-      <p><i class="fa fa-sign-in"></i> <%= station.sessions.opened_today.count %> | <i class="fa fa-clock-o"></i> 49</p>
+      <p>
+        <i class="fa fa-sign-in"></i> <%= station.sessions.opened_today.count %> |
+        <i class="fa fa-clock-o"></i>
+          <% total_time = 0 %>
+          <% station.sessions.closed.opened_today.each do |sess|  %>
+          <% total_time += sess.duration %>
+           <%= time_ago_in_words(total_time.seconds.from_now) %>
+          <% end %>
+      </p>
     </div>
   </div>
   <% end %>
