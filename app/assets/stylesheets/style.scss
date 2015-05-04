@@ -1275,7 +1275,7 @@ PANELS CONFIGURATIONS
 
 /* Instagram Panel*/
 .instagram-panel {
-  background: url(../img/instagram.jpg) no-repeat center top;
+  background: url(instagram.jpg) no-repeat center top;
   text-align: center;
   background-position: center center;
 }
@@ -2261,6 +2261,14 @@ label {
 
 .verde-scuro {
   color: #215854;
+}
+
+.azzurro {
+  color: #68dff0;
+}
+
+.bianco {
+  color: #fff;
 }
 
 .datetime-select {
