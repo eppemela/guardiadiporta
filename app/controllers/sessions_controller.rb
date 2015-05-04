@@ -86,15 +86,16 @@ class SessionsController < ApplicationController
         format.json  { render :json => {:timeline => msg} }
       end
     end
+  end
 
-    private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_session
-      @session = Session.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def session_params
-      params.require(:session).permit(:start, :end, :duration, :open, :station_id)
-    end
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_session
+    @session = Session.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def session_params
+    params.require(:session).permit(:start, :end, :duration, :open, :station_id)
   end

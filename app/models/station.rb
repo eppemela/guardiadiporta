@@ -30,5 +30,19 @@ class Station < ActiveRecord::Base
     true
   end
 
+  def self.today_visits
+    today_users = []
+    visited_today.each do |stat|
+      tot_time = 0
+      stat.sessions.closed.each do |sess|
+        tot_time += sess.duration
+      end
+      today_users.push({
+        :station => stat,
+        :total_time => tot_time
+        })
+      end
+      today_users
+    end
 
-end
+  end
