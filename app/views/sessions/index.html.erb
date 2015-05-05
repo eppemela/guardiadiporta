@@ -18,4 +18,31 @@ $(document).ready(function() {
 });
 </script>
 
-<div id="timeline-embed"></div>
+<div class="row">
+  <div class='col-sm-6'>
+    <div class="form-group">
+      <div class='input-group date' id='datetimepicker'>
+        <input type='text' class="form-control" />
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  $(function () {
+    $('#datetimepicker').datetimepicker();
+    $('#datetimepicker').data("DateTimePicker").maxDate(new Date());
+    $('#datetimepicker').data("DateTimePicker").defaultDate(new Date());
+    $('#datetimepicker').on("dp.change", function(e) {
+      alert($('#datetimepicker').data("DateTimePicker").date());
+    });
+  });
+  </script>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div id="timeline-embed"></div>
+  </div>
+</div>

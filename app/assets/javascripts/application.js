@@ -19,3 +19,5 @@
 //= require bootstrap-switch
 //=require timelineJS/embed
 //=require timelineJS/locale/it
+//= require moment
+//= require bootstrap-datetimepicker
