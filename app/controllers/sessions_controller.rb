@@ -62,7 +62,7 @@ class SessionsController < ApplicationController
   end
 
   def timeline
-    @sessions = Session.all
+    @sessions = Session.by_day(params[:day_to_display])
     slides = []
     @sessions.each do |s|
       name = s.station.name.nil? ? s.station.mac_addr : s.station.name

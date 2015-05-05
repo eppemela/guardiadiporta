@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/radar/by_star
+  revision: 42c5583dc6f802cf4a629a4fb83d34de58aefa26
+  specs:
+    by_star (2.2.1)
+      activesupport
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -181,6 +188,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.4)
   bootstrap-switch-rails
   bootstrap3-datetimepicker-rails (~> 4.7.14)
+  by_star!
   byebug
   capistrano-bundler (~> 1.1.2)
   capistrano-rails (~> 1.1.1)
