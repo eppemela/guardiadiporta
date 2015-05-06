@@ -25,7 +25,7 @@ class Session < ActiveRecord::Base
     end
   end
 
-  def self.today
+  def self.today_timeline
     all_sessions = []
     opened_today.each do |s|
       unless s.station.ignore?
