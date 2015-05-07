@@ -1,25 +1,17 @@
-<% content_for :title, "Sessions" %>
+<% content_for :title, "Sessions timeline" %>
 <% content_for :header do -%>
 <%= stylesheet_link_tag 'timeline' %>
 <% end -%>
 
 <script type="text/javascript">
 $(document).ready(function() {
-  createStoryJS({
-    width: '100%',
-    height: '600',
-    start_at_end: true,
-    font: 'DroidSerif-DroidSans',
-    lang: 'it',
-    type: 'timeline',
-    source: '/timeline.json',
-    embed_id: 'timeline-embed'
-  });
+
 });
 </script>
 
 <div class="row">
-  <div class='col-sm-6'>
+
+  <div class='col-sm-3'>
     <div class="form-group">
       <div class='input-group date' id='datetimepicker'>
         <input type='text' class="form-control" />
@@ -29,13 +21,33 @@ $(document).ready(function() {
       </div>
     </div>
   </div>
+  <div class='col-sm-9'>
+    <h5>
+      <b>Here we are!</b> Just choose a date you want to inspect.
+    </h5>
+  </div>
+
   <script type="text/javascript">
-  $(function () {
+  $(document).ready(function () {
     $('#datetimepicker').datetimepicker();
     $('#datetimepicker').data("DateTimePicker").maxDate(new Date());
-    $('#datetimepicker').data("DateTimePicker").defaultDate(new Date());
     $('#datetimepicker').on("dp.change", function(e) {
-      alert($('#datetimepicker').data("DateTimePicker").date());
+      var date = $('#datetimepicker').data("DateTimePicker").date();
+      var formatted_date = new Date(date).format("yyyy-mm-dd");
+
+      $('#timeline-embed').html('');
+
+      createStoryJS({
+        width: '100%',
+        height: '600',
+        start_at_end: false,
+        font: 'DroidSerif-DroidSans',
+        lang: 'it',
+        type: 'timeline',
+        source: '/timeline.json?day_to_display='+formatted_date,
+        embed_id: 'timeline-embed'
+      });
+
     });
   });
   </script>

@@ -77,10 +77,10 @@ class SessionsController < ApplicationController
 
       respond_to do |format|
         msg = {
-          :headline => "Sessions TimeLine",
+          :headline => "Sessions Timeline",
           :type => "default",
-          :text => "All the sessions since the beginning of time...",
-          :startDate => Session.first.start,
+          :text => "All the sessions for #{DateTime.parse("#{@sessions.first.start.to_s}").strftime('%a %b %d %Y')}",
+          :startDate => @sessions.first.start,
           :date => slides
         }
         format.json  { render :json => {:timeline => msg} }
