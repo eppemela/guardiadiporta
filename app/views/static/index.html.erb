@@ -1,31 +1,53 @@
 <% content_for :header do -%>
 <%= stylesheet_link_tag 'lineicons' %>
-
 <% end -%>
 
 <% content_for :title, "Dashboard" %>
+<div class="col-md-4 col-sm-4">
+  <div class="white-panel pn info-box">
+    <div class="white-header">
+      <h5>First to get in</h5>
+    </div>
+    <span class="li_key info-box"></span>
+    <p><b><%= @first_in[:name] %></b></p>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="small mt">ARRIVAL TIME</p>
+        <p><%= DateTime.parse("#{@first_in[:arrival_time]}").strftime('%H:%M:%S') %></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="row mtbox">
-  <div class="col-md-4 col-sm-4 box0">
-    <div class="box1">
-      <span class="li_key"></span>
-      <h3>First to get in</h3>
+<div class="col-md-4 col-sm-4">
+  <div class="white-panel pn info-box">
+    <div class="white-header">
+      <h5>Last to get out</h5>
     </div>
-    <p><%= @first_in[:name] %> @ <%= DateTime.parse("#{@first_in[:arrival_time]}").strftime('%H:%M:%S') %> </p>
+    <span class="li_lock info-box"></span>
+    <p><b><%= @last_out[:name] %></b></p>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="small mt">LEAVING TIME</p>
+        <p><%= DateTime.parse("#{@last_out[:leaving_time]}").strftime('%H:%M:%S') %></p>
+      </div>
+    </div>
   </div>
-  <div class="col-md-4 col-sm-4 box0">
-    <div class="box1">
-      <span class="li_lock"></span>
-      <h3>Last to get out</h3>
+</div>
+
+<div class="col-md-4 col-sm-4">
+  <div class="white-panel pn info-box">
+    <div class="white-header">
+      <h5>Total daily visits</h5>
     </div>
-    <p><%= @last_out[:name] %> @ <%= DateTime.parse("#{@last_out[:leaving_time]}").strftime('%H:%M:%S') %> </p>
-  </div>
-  <div class="col-md-4 col-sm-4 box0">
-    <div class="box1">
-      <span class="li_user"></span>
-      <h3>Total daily visits</h3>
+    <span class="li_user info-box"></span>
+    <p><b><%= @total_visits.to_a.count %></b></p>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="small mt">PEOPLE SO FAR</p>
+        <p>&nbsp;</p>
+      </div>
     </div>
-    <p> <%= @total_visits.to_a.count %> </p>
   </div>
 </div>
 

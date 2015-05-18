@@ -7,12 +7,19 @@ class StaticController < ApplicationController
       arrival_time:  Session.today.first.start
     }
     @first_in = first_in_hash
-
-    last_out_hash = {
-      name: Session.closed.today.last.station.name,
-      leaving_time: Session.closed.today.last.end
-    }
+    unless Session.closed.today.empty?
+      last_out_hash = {
+        name: Session.closed.today.last.station.name,
+        leaving_time: Session.closed.today.last.end
+      }
+    else
+      last_out_hash = {
+        name: "N/D",
+        leaving_time: "N/D"
+      }
+    end
     @last_out = last_out_hash
+
     @total_visits = Session.today.group(:station_id)
 
   end
