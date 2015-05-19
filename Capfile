@@ -10,7 +10,10 @@ require 'capistrano/bundler'
 
 # require 'capistrano/bundler'
 
-#require 'capistrano/rvm'
+require 'capistrano/rvm'
+set :rvm_type, :user
+set :rvm_ruby_version, '2.1.1'
+
 
 # Include tasks from other gems included in your Gemfile
 #

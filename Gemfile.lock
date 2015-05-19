@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/capistrano/rvm.git
+  revision: 9cfef39cf0022839dca6b5b330dfefeb5fc363e7
+  specs:
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
+
+GIT
   remote: git://github.com/radar/by_star
   revision: 42c5583dc6f802cf4a629a4fb83d34de58aefa26
   specs:
@@ -190,8 +198,10 @@ DEPENDENCIES
   bootstrap3-datetimepicker-rails (~> 4.7.14)
   by_star!
   byebug
+  capistrano (~> 3.4.0)
   capistrano-bundler (~> 1.1.2)
   capistrano-rails (~> 1.1.1)
+  capistrano-rvm!
   chart-js-rails
   chartkick
   coffee-rails (~> 4.1.0)

@@ -11,6 +11,9 @@ set :deploy_via, :copy
 set :ssh_options, { :forward_agent => true }
 set :keep_releases, 5
 set :rvm_ruby_version, '2.1.1'
+set :linked_files, %w{config/database.yml}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+
 #default_run_options[:pty] = true
 
 #set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
