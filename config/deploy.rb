@@ -1,6 +1,6 @@
 set :application, "guardiadiporta"
 set :repo_url,  "git@github.com:eppemela/guardiadiporta.git"
-set :deploy_to, "/home/pi/guardiadiporta/public"
+set :deploy_to, "/home/pi/guardiadiporta/"
 set :scm, :git
 set :branch, "master"
 set :user, "pi"
