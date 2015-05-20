@@ -29,7 +29,11 @@
     <div class="row">
       <div class="col-md-12">
         <p class="small mt">LEAVING TIME</p>
-        <p><%= DateTime.parse("#{@last_out[:leaving_time]}").strftime('%H:%M:%S') %></p>
+        <p>
+          <% unless @last_out[:leaving_time] == "N/D" %>
+            <%= DateTime.parse("#{@last_out[:leaving_time]}").strftime('%H:%M:%S') %>
+          <% end %>
+        </p>
       </div>
     </div>
   </div>

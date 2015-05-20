@@ -8,10 +8,17 @@ class StaticController < ApplicationController
     }
     @first_in = first_in_hash
     unless Session.closed.today.empty?
-      last_out_hash = {
-        name: Session.closed.today.last.station.name,
-        leaving_time: Session.closed.today.last.end
-      }
+      unless Station.present.include?(Session.closed.today.last.station)
+        last_out_hash = {
+          name: Session.closed.today.last.station.name,
+          leaving_time: Session.closed.today.last.end
+        }
+      else
+        last_out_hash = {
+          name: Session.closed.today.last(2).first.station.name,
+          leaving_time: Session.closed.today.last.end
+        }
+      end
     else
       last_out_hash = {
         name: "N/D",
