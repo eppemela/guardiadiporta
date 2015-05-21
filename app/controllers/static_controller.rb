@@ -2,11 +2,20 @@ class StaticController < ApplicationController
 
   def index
     @present_stations = Station.today_visits
-    first_in_hash = {
-      name:  Session.today.first.station.name,
-      arrival_time:  Session.today.first.start
-    }
+
+    unless Session.today.empty?
+      first_in_hash = {
+        name:  Session.today.first.station.name,
+        arrival_time:  Session.today.first.start
+      }
+    else
+      first_in_hash = {
+        name: "N/D",
+        arrival_time: "N/D"
+      }
+    end
     @first_in = first_in_hash
+
     unless Session.closed.today.empty?
       unless Station.present.include?(Session.closed.today.last.station)
         last_out_hash = {
