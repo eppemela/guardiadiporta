@@ -17,7 +17,7 @@
 //= require_tree .
 //= require Chart
 //= require bootstrap-switch
-//= require timelineJS/embed
-//= require timelineJS/locale/it
 //= require moment
 //= require bootstrap-datetimepicker
+//= require timelineJS/embed
+//= require timelineJS/locale/it

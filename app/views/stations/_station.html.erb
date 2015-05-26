@@ -15,17 +15,17 @@
     <h5 class="mt"><strong><%= station.name.nil? ? station.mac_addr : station.name %></strong></h5>
     <h6>Last seen: <%= time_ago_in_words(station.last_seen) %> ago</h6>
     <%= link_to(station) do %>
-    <button type="button" class="btn btn-theme">
+    <button type="button" class="btn btn-theme btn-sm">
       <i class="fa fa-eye"></i> Show
     </button>
     <% end %>
     <%= link_to(edit_station_path(station)) do %>
-    <button type="button" class="btn btn-theme02">
+    <button type="button" class="btn btn-theme02 btn-sm">
       <i class="fa fa-pencil-square-o"></i> Edit
     </button>
     <% end %>
     <%= link_to(station, method: :delete, data: { confirm: 'Are you sure? The station and its sessions will be lost forever!' }) do %>
-    <button type="button" class="btn btn-theme04">
+    <button type="button" class="btn btn-theme04 btn-sm">
       <i class="fa fa-trash-o"></i> Destroy
     </button>
     <% end %>
