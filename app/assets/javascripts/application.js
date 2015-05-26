@@ -15,7 +15,6 @@
 //= require bootstrap-sprockets
 //= require Chart
 //= require bootstrap-switch
-//= require select2
 //= require moment
 //= require bootstrap-datetimepicker
 //= require timelineJS/embed
