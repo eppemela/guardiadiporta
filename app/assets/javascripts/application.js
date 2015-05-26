@@ -12,12 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui/tooltip
 //= require bootstrap-sprockets
-//= require_tree .
 //= require Chart
 //= require bootstrap-switch
+//= require select2
 //= require moment
 //= require bootstrap-datetimepicker
 //= require timelineJS/embed
 //= require timelineJS/locale/it
+//= require_tree .
