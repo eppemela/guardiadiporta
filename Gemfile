@@ -42,7 +42,7 @@ gem 'chart-js-rails'
 
 gem "bootstrap-switch-rails"
 
-gem 'timelineJS-rails', '~> 1.1.5'
+# gem 'timelineJS-rails', '~> 1.1.5'
 
 gem 'momentjs-rails', '>= 2.9.0'
 

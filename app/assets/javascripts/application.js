@@ -12,11 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require moment
 //= require bootstrap-sprockets
 //= require bootstrap-datetimepicker
 //= require bootstrap-switch
 //= require Chart
-//= require moment
-//= require timelineJS/embed
-//= require timelineJS/locale/it
 //= require_tree .

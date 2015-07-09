@@ -3,8 +3,7 @@ $(document).ready(function () {
   $('#datetimepicker').data("DateTimePicker").maxDate(new Date());
   $('#datetimepicker').on("dp.change", function(e) {
     var date = $('#datetimepicker').data("DateTimePicker").date();
-    var formatted_date = new Date(date).format("yyyy-mm-dd");
-
+    var formatted_date = date.toISOString().slice(0,10);
     $('#timeline-embed').html('');
 
     createStoryJS({
