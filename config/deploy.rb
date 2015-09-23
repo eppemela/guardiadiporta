@@ -13,6 +13,7 @@ set :keep_releases, 5
 set :rvm_ruby_version, '2.1.1'
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 
 #default_run_options[:pty] = true
 

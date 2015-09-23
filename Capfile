@@ -9,6 +9,7 @@ require 'capistrano/rails'
 require 'capistrano/bundler'
 
 # require 'capistrano/bundler'
+require "whenever/capistrano"
 
 require 'capistrano/rvm'
 set :rvm_type, :user
