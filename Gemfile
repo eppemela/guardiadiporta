@@ -50,6 +50,8 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.7.14'
 
 gem 'by_star', :git => "git://github.com/radar/by_star"
 
+gem "airbrussh", :require => false
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
