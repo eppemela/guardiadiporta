@@ -5,7 +5,7 @@
 set :stage, :production
 set :branch, "master"
 
-server '192.168.2.20', user: 'pi', roles: %w{app db web}
+server '192.168.1.20', user: 'pi', roles: %w{app db web}
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
