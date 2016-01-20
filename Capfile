@@ -14,6 +14,7 @@ require "whenever/capistrano"
 require "airbrussh/capistrano"
 
 require 'capistrano/rvm'
+require 'capistrano/rails/console'
 set :rvm_type, :user
 set :rvm_ruby_version, '2.1.1'
 
