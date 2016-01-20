@@ -1,20 +1,13 @@
-# Load DSL and set up stages
 require 'capistrano/setup'
-
-# Include default deployment tasks
 require 'capistrano/deploy'
-
-require 'capistrano/rails'
-
 require 'capistrano/bundler'
-
-# require 'capistrano/bundler'
+require 'capistrano/rails'
+require 'capistrano/rvm'
+require "airbrussh/capistrano"
+require 'capistrano/rails/console'
 require "whenever/capistrano"
 
-require "airbrussh/capistrano"
 
-require 'capistrano/rvm'
-require 'capistrano/rails/console'
 set :rvm_type, :user
 set :rvm_ruby_version, '2.1.1'
 
