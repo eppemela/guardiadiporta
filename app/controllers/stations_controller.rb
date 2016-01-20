@@ -11,6 +11,8 @@ class StationsController < ApplicationController
   # GET /stations/1.json
   def show
     @station = Station.find(params[:id])
+    @mta = Session.where(station_id: @station.id).group_by_hour_of_day(:created_at, format: "%l %P").count 
+
     respond_to do |format|
       format.html { render :show }
       format.json { render json: @station }

@@ -1,9 +1,12 @@
 <% content_for :title, @station.name %>
 <% if(notice) %>
 <div class="alert alert-success alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
   <%= notice %>
 </div>
+
 <% end %>
 
 <div class="row">
@@ -13,41 +16,77 @@
       <div class="green-header">
         <div class="row">
           <div class="col-sm-3 col-xs-3"></div>
-          <div class="col-sm-6 col-xs-6 centered"><h3><%= @station.name %></h3></div>
+          <div class="col-sm-6 col-xs-6 centered">
+            <h3><%= @station.name %></h3>
+          </div>
 
           <div class="col-sm-3 col-xs-3 goright">
             <%= link_to(stations_path) do %>
             <button type="button" class="btn btn-default">
-              <i class="fa fa-undo"></i> Back
+              <i class="fa fa-undo"></i>
+              Back
             </button>
             <% end %>
             <%= link_to(edit_station_path(@station)) do %>
             <button type="button" class="btn btn-primary">
-              <i class="fa fa-pencil-square-o"></i> Edit
+              <i class="fa fa-pencil-square-o"></i>
+              Edit
             </button>
             <% end %>
           </div>
         </div>
       </div>
 
-      <h3>Mac address: <strong><span class="verde-scuro"><%= @station.mac_addr %></span></strong></h3>
-      <h3>Last seen: <strong><span class="verde-scuro"><%= time_ago_in_words(@station.last_seen) %></span></strong> ago</h3>
-      <h3>Ignore:
-        <div class="switch has-switch deactivate">
-          <% if(@station.ignore?) %>
-          <div class="switch-on">
-            <% else %>
-            <div class="switch-off">
-              <% end %>
-              <input type="checkbox" disabled="" data-toggle="switch">
-              <span class="switch-left">ON</span>
-              <label>&nbsp;</label>
-              <span class="switch-right">OFF</span>
+      <h3>Mac address:
+        <strong>
+          <span class="verde-scuro"><%= @station.mac_addr %></span>
+        </strong>
+      </h3>
+      <h3>Last seen:
+        <strong>
+          <span class="verde-scuro"><%= time_ago_in_words(@station.last_seen) %></span>
+        </strong>
+        ago</h3>
+        <h3>Ignore:
+          <div class="switch has-switch deactivate">
+            <% if(@station.ignore?) %>
+            <div class="switch-on">
+              <% else %>
+              <div class="switch-off">
+                <% end %>
+                <input type="checkbox" disabled="" data-toggle="switch">
+                <span class="switch-left">ON</span>
+                <label>&nbsp;</label>
+                <span class="switch-right">OFF</span>
+              </div>
             </div>
-          </div>
-        </h3>
+          </h3>
 
+        </div>
       </div>
+      <div class="col-md-2"></div>
     </div>
-    <div class="col-md-2"></div>
   </div>
+
+</div>
+</div>
+<div class="row mt">
+  <div class="col-md-2"></div>
+  <div class="col-md-8 centered">
+    <div class="green-panel pn">
+      <div class="green-header" style="margin-bottom: 0px;">
+        <div class="row">
+          <div class="col-sm-3 col-xs-3"></div>
+
+          <div class="col-sm-6 col-xs-6 centered">
+            <h3>Average arrival time</h3>
+          </div>
+        </div>
+      </div>
+      <%= column_chart @mta, height: "250px" %>
+
+    </div>
+
+  </div>
+  <div class="col-md-2"></div>
+</div>
