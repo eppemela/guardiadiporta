@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,27 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150406161050) do
+ActiveRecord::Schema.define(version: 20150413153409) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "sessions", force: :cascade do |t|
     t.datetime "start"
     t.datetime "end"
-    t.integer  "duration",   limit: 4
-    t.boolean  "open",       limit: 1
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "station_id", limit: 4
+    t.integer  "duration"
+    t.boolean  "open"
+    t.integer  "station_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "sessions", ["station_id"], name: "index_sessions_on_station_id", using: :btree
-
   create_table "stations", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "mac_addr",   limit: 255
+    t.string   "name"
+    t.string   "mac_addr"
     t.datetime "last_seen"
-    t.boolean  "ignore",     limit: 1,   default: false
+    t.boolean  "ignore"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
