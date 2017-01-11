@@ -219,6 +219,7 @@ DEPENDENCIES
   jquery-ui-rails
   momentjs-rails (>= 2.9.0)
   mysql2 (~> 0.3.18)
+  puma
   rails (= 4.2.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
