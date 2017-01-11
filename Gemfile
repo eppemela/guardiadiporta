@@ -75,6 +75,7 @@ group :development, :test do
   gem 'capistrano-rvm', github: "capistrano/rvm"
   #gem 'capistrano-rails'
   gem 'capistrano-rails-console'
+  gem 'capistrano3-puma',   require: false
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   #gem 'web-console', '2.0.0.beta3'

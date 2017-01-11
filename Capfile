@@ -6,7 +6,7 @@ require 'capistrano/rvm'
 require "airbrussh/capistrano"
 require 'capistrano/rails/console'
 require "whenever/capistrano"
-
+require 'capistrano/puma'
 
 set :rvm_type, :user
 set :rvm_ruby_version, '2.3.3'

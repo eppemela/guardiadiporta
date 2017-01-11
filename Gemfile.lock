@@ -77,6 +77,9 @@ GEM
       capistrano-bundler (~> 1.1)
     capistrano-rails-console (1.0.2)
       capistrano (>= 3.1.0, < 4.0.0)
+    capistrano3-puma (1.2.1)
+      capistrano (~> 3.0)
+      puma (>= 2.6)
     chart-js-rails (0.1.1)
       railties (> 3.1)
     chartkick (2.2.2)
@@ -126,6 +129,7 @@ GEM
     net-ssh (4.0.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
+    puma (3.6.2)
     rack (1.6.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -204,6 +208,7 @@ DEPENDENCIES
   capistrano-rails (~> 1.1.1)
   capistrano-rails-console
   capistrano-rvm!
+  capistrano3-puma
   chart-js-rails
   chartkick
   coffee-rails (~> 4.1.0)
