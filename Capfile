@@ -9,7 +9,7 @@ require "whenever/capistrano"
 
 
 set :rvm_type, :user
-set :rvm_ruby_version, '2.1.1'
+set :rvm_ruby_version, '2.3.3'
 
 
 # Include tasks from other gems included in your Gemfile
