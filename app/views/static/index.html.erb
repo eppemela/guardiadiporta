@@ -15,7 +15,7 @@
         <p class="small mt">ARRIVAL TIME</p>
         <p>
           <% unless @first_in[:arrival_time] == "N/D" || @first_in[:arrival_time].nil? %>
-            <%= DateTime.parse("#{@first_in[:arrival_time]}").strftime('%H:%M:%S') %>
+            <%= DateTime.parse("#{@first_in[:arrival_time]}").strptime('%H:%M:%S') %>
           <% end %>
         </p>
       </div>
@@ -35,7 +35,7 @@
         <p class="small mt">LEAVING TIME</p>
         <p>
           <% unless @last_out[:leaving_time] == "N/D" || @last_out[:leaving_time].nil? %>
-            <%= DateTime.parse("#{@last_out[:leaving_time]}").strftime('%H:%M:%S') %>
+            <%= DateTime.parse("#{@last_out[:leaving_time]}").strptime('%H:%M:%S') %>
           <% end %>
         </p>
       </div>
